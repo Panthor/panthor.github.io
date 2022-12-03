@@ -1,0 +1,95 @@
+body {
+  font-family: Arial;
+  height: 100vh;
+  background-color: bisque;
+  background-color: rgb(255, 216, 169);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+div {
+  fill: darkslateblue;
+  width: 300px;
+  height: 300px;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1em;
+  color: darkslateblue;
+  border-radius: 10px;
+  /* text-shadow: 1px 1px #fff; */
+  box-shadow: 8px 20px darkslateblue;
+  transition: transform 0.3s ease-in-out 0s, box-shadow 0.3s ease-in-out 0s,
+    background-color 0.3s ease-in-out 0.2s, color 0.3s ease-in-out,
+    fill 0.3s ease-in 1s;
+}
+
+div:hover {
+  cursor: pointer;
+}
+
+div:active {
+  transform: translateX(8px) translateY(20px);
+  box-shadow: none;
+  background-color: lightseagreen;
+  color: bisque;
+  color: rgb(255, 216, 169);
+  fill: deeppink;
+}
+
+span {
+  font-weight: bold;
+}
+
+.material-icons {
+  font-size: 4rem;
+}
+
+.card1 {
+  background-color: plum;
+}
+
+.card2 {
+  background-color: hotpink;
+}
+
+.card3 {
+  background-color: lightskyblue;
+  background-color: powderblue;
+  background-color: rosybrown;
+  background-color: darksalmon;
+}
+
+img {
+  width: 60px;
+}
+
+.baby {
+  filter: red;
+  fill: red;
+}
+
+.svg-icon {
+  width: 70px;
+  /* fill: darkslateblue; */
+}
+
+.card4 {
+  background-color: powderblue;
+}
+
+.card4 svg {
+  width: 65px;
+  height: 65px;
+  /* outline: 1px solid red; */
+  /* fill: red; */
+}

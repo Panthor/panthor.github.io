@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Teich</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Teich</a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <img src="img/curve.png" class="wave" alt="image of a wave" />
+      <div class="contentBx">
+        <h2>Coming Soon</h2>
+        <p>Things are happening.</p>
+        <p>Stay tuned.</p>
+        <a href="#" onclick="toggle();">Notify Me!</a>
+      </div>
+      <div class="imgBx">
+        <img src="img/man.png" alt="worker" />
+      </div>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="img/facebook.png" alt="" /></a>
+          <a href="#"><img src="img/twitter.png" alt="" /></a>
+          <a href="#"><img src="img/instagram.png" alt="" /></a>
+        </li>
+      </ul>
+    </section>
+    <div class="newsletter">
+      <h2>Stay Tuned</h2>
+      <p>Get notified at launch</p>
+      <div class="inputBox">
+        <form action="">
+          <input
+            type="email"
+            name=""
+            id=""
+            required=""
+            placeholder="Enter Email Adress"
+          />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <img src="img/close.png" class="close" alt="" onclick="toggle();" />
+    </div>
+    <script type="text/javascript">
+      function toggle() {
+        var newsletter = document.querySelector(".newsletter");
+        newsletter.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

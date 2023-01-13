@@ -23,7 +23,7 @@ header {
 
 header .logo {
   position: relative;
-  color: #fff;
+  color: #f1ebeb;
   font-size: 28px;
   text-decoration: none;
   font-weight: 600;
@@ -43,7 +43,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: #f1ebeb;
   font-size: 18px;
   text-decoration: none;
 }
@@ -69,13 +69,13 @@ section .contentBx {
 
 section .contentBx h2 {
   font-size: 60px;
-  color: #fff;
+  color: #f1ebeb;
   text-transform: uppercase;
 }
 
 section .contentBx p {
   font-size: 18px;
-  color: #fff;
+  color: #f1ebeb;
 }
 
 section .contentBx a {
@@ -83,7 +83,7 @@ section .contentBx a {
   margin-top: 30px;
   display: inline-block;
   background-color: #ff0083;
-  color: #fff;
+  color: #f1ebeb;
   font-size: 20px;
   letter-spacing: 2px;
   padding: 15px 35px;
@@ -135,7 +135,7 @@ section .sci li a {
   transform: translate(-50%, -50%);
   width: 600px;
   padding: 60px;
-  background: #fff;
+  background: #f1ebeb;
   z-index: 10000;
   box-shadow: 0 0 0 100vh rgba(49, 39, 71, 0.95);
   visibility: hidden;
@@ -174,7 +174,7 @@ section .sci li a {
   padding: 10px;
   outline: none;
   width: 140px;
-  color: #fff;
+  color: #f1ebeb;
   background: #ff0083;
   border: 1px solid #ff0083;
   letter-spacing: 2px;
@@ -226,7 +226,7 @@ section .sci li a {
     position: relative;
     margin-top: 10px;
     display: inline-block;
-    background: #fff;
+    background: #f1ebeb;
     color: #ff0083;
     font-size: 16px;
     letter-spacing: 2px;

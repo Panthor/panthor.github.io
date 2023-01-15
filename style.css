@@ -7,6 +7,7 @@
 
 body {
   background: #312747;
+  /* background: #3a3042; */
 }
 
 header {
@@ -24,6 +25,7 @@ header {
 header .logo {
   position: relative;
   color: #f1ebeb;
+  color: #ff0083;
   font-size: 28px;
   text-decoration: none;
   font-weight: 600;
@@ -50,6 +52,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
   color: #ff0083;
+  /* color: #ff784f; */
 }
 
 section {
@@ -67,8 +70,17 @@ section .contentBx {
   z-index: 1000;
 }
 
-section .contentBx h2 {
+section .contentBx h1 {
+  color: #f1ebeb;
+  /* color: #ff0083; */
   font-size: 60px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+section .contentBx h2 {
+  font-size: 30px;
   color: #f1ebeb;
   text-transform: uppercase;
 }
@@ -83,6 +95,7 @@ section .contentBx a {
   margin-top: 30px;
   display: inline-block;
   background-color: #ff0083;
+  /* background-color: #ff784f; */
   color: #f1ebeb;
   font-size: 20px;
   letter-spacing: 2px;
@@ -176,7 +189,9 @@ section .sci li a {
   width: 140px;
   color: #f1ebeb;
   background: #ff0083;
+  /* background: #ff784f; */
   border: 1px solid #ff0083;
+  /* border: 1px solid #ff784f; */
   letter-spacing: 2px;
   box-sizing: border-box;
   cursor: pointer;
@@ -198,6 +213,10 @@ section .sci li a {
     height: auto;
   }
 
+  section .contentBx h1 {
+    font-size: 60px;
+  }
+
   section .contentBx {
     max-width: 100%;
   }
@@ -216,8 +235,12 @@ section .sci li a {
     padding: 120px 50px 100px;
     height: auto;
   }
+
+  section .contentBx h1 {
+    font-size: 34px;
+  }
   section .contentBx h2 {
-    font-size: 40px;
+    font-size: 20px;
   }
   section .contentBx p {
     font-size: 16px;
@@ -228,6 +251,7 @@ section .sci li a {
     display: inline-block;
     background: #f1ebeb;
     color: #ff0083;
+    /* color: #ff784f; */
     font-size: 16px;
     letter-spacing: 2px;
     padding: 10px 25px;

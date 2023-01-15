@@ -72,7 +72,6 @@ section .contentBx {
 
 section .contentBx h1 {
   color: #f1ebeb;
-  /* color: #ff0083; */
   font-size: 60px;
   text-transform: uppercase;
   margin-bottom: 30px;

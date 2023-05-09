@@ -50,7 +50,7 @@ section img {
 
 #text {
   position: relative;
-  color: white;
+  color: #fdf2e9;
   z-index: 2;
   font-size: 10em;
   text-align: center;
@@ -70,7 +70,7 @@ section img {
 
 .heading h2 {
   font-size: 40px;
-  color: white;
+  color: #fdf2e9;
   letter-spacing: 0.5px;
   margin-bottom: 30px;
 }
@@ -199,4 +199,33 @@ svg {
   100% {
     transform: scale(1);
   }
+}
+
+/* intersection observer needed css */
+
+.hidden {
+  opacity: 0;
+  filter: blur(0);
+  /* transform: translateX(-100%); */
+  /* transition: all 5s; */
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 2s;
+  /* transition-delay: 4s; */
+}
+
+.box2 {
+  transition-delay: 100ms;
+}
+
+.box3 {
+  transition-delay: 300ms;
+}
+
+.box4 {
+  transition-delay: 500ms;
 }

@@ -1,0 +1,870 @@
+/******************************************************************************
+GENERAL 
+*******************************************************************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+/******************************************************************************
+DESIGNED WITH AND SVG
+*******************************************************************************/
+
+.bottom {
+  text-align: center;
+  color: #adb5bd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.bottom svg {
+  height: 2em;
+  width: 2em;
+  fill: #e76f51;
+  animation: beating-heart 2s infinite;
+}
+
+@keyframes beating-heart {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/***********************************************************************************************
+POCETAK CONTAINER
+************************************************************************************************/
+
+.learn {
+  text-align: left;
+  width: 50%;
+  background-color: #000;
+  color: #eae6ef;
+  /* border-right: 1px dashed red; */
+}
+
+.teach {
+  width: 50%;
+  background-color: #000;
+}
+
+.pocetak-container h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-size: 5.1rem;
+  color: #fed7aa;
+  color: #eae6ef;
+}
+
+.pocetak-container p {
+  margin-top: 0.6rem;
+}
+
+.pocetak-container {
+  max-width: 1300px;
+  margin: 0px auto;
+}
+
+.learn {
+  background-color: inherit;
+}
+
+.teach {
+  background-color: inherit;
+}
+
+.pocetak-container {
+  display: flex;
+  margin-bottom: 30rem;
+}
+
+.pocetak-container .split {
+  width: 50%;
+  padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .pocetak-container {
+    flex-direction: column;
+  }
+  .pocetak-container .split {
+    width: 100%;
+    /* height: 50%; */
+  }
+  .learn {
+    width: 100%;
+    border-right: none;
+    /* border-bottom: 1px dashed red; */
+    text-align: center;
+  }
+  .teach {
+    width: 100%;
+  }
+
+  .teach svg {
+    width: 70%;
+  }
+}
+
+.pocetak-container .split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pocetak-container svg {
+  width: 100%;
+  height: 100%;
+  /* width: 80%; */
+}
+
+/* Animations */
+
+.djevojka {
+  animation: subtleMove 2s alternate-reverse infinite ease-in-out;
+}
+.biljka {
+  animation: subtleMove2 2s alternate-reverse infinite ease-in-out;
+}
+
+@keyframes subtleMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(15px);
+  }
+}
+
+@keyframes subtleMove2 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(25px);
+  }
+}
+
+.features .wrapper ul li,
+h1,
+.pocetak-paragraf {
+  animation: fadeInUp 1s forwards;
+  opacity: 0;
+}
+.pocetak-paragraf {
+  animation-delay: 0.3s;
+}
+.mojedugme {
+  animation-delay: 0.6s;
+}
+.features .wrapper ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.features .wrapper ul li:nth-of-type(2) {
+  animation-delay: 0.9s;
+}
+.features .wrapper ul li:nth-of-type(3) {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/**************************************************************************************************************************************
+SVG ANIMACIJE
+***************************************************************************************************************************************/
+.rect {
+  animation: rotate 10s linear infinite;
+  /* transform-origin: 132px 62px; */
+  transform-origin: center center;
+  transform-box: fill-box;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rect-left {
+  animation: rotate-left 8s linear infinite;
+  /* transform-origin: 132px 62px; */
+  transform-origin: center center;
+  transform-box: fill-box;
+}
+
+@keyframes rotate-left {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/**********************
+SVG HEADER
+***********************/
+
+.svg-header {
+  max-width: 1300px;
+  background-image: url(img/headersvg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: scroll;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/*************************************************************************************************************
+APPROACH
+*************************************************************************************************************/
+
+.approach {
+  line-height: 1.5;
+  margin: 20rem auto;
+  max-width: 1300px;
+  text-align: center;
+  color: #f3f3f7;
+  flex-direction: flex;
+  flex-direction: column;
+}
+
+.approach-h2 {
+  line-height: 1;
+  font-size: 8rem;
+}
+
+.approach-p {
+  max-width: 60ch;
+  /* width: 40ch; */
+  text-align: center;
+  /* outline: 1px dashed red; */
+  margin: 3rem auto;
+}
+
+@media screen and (max-width: 663px) {
+  .approach-h2 {
+    font-size: 4rem;
+  }
+  .approach-p {
+    /* color: red; */
+    font-size: 1.7rem;
+    max-width: 40ch;
+  }
+}
+
+/*******************************************************************************************************
+APPROACH FLEX
+********************************************************************************************************/
+
+.approach-flex {
+  display: flex;
+  /* outline: 1px dashed red; */
+  margin: 7rem auto;
+  gap: 2rem;
+}
+
+.lijevo {
+  width: 50%;
+  /* outline: 1px dashed red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lijevo svg {
+  width: 100%;
+}
+
+.desno {
+  /* line-height: 1.5; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: left;
+  /* width: 70ch; */
+  /* margin-bottom: 2rem; */
+}
+
+.desno p {
+  margin-bottom: 3rem;
+}
+
+.pristup-naslov {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.desno .pristup-naslov {
+  margin-bottom: 1rem;
+}
+
+.sigurnost p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .approach-flex {
+    flex-direction: column;
+  }
+  .lijevo {
+    width: 100%;
+  }
+  .lijevo svg {
+    width: 70%;
+  }
+  .desno {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .desno .pristup-naslov {
+    text-align: center;
+  }
+  .approach p {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+/************************************************************************************************************
+SREDINA
+**************************************************************************************************************/
+
+/* Generic Styles */
+
+h3 {
+  color: #2754b3;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.sredina p {
+  margin-bottom: 2rem;
+}
+
+.sredina {
+  max-width: 1300px;
+  margin: 20rem auto;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.sredina > img {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+}
+
+/* Generic Styles End */
+
+.sredina {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "img"
+    "list1"
+    "list2";
+  column-gap: 2rem;
+}
+
+.sredina img {
+  grid-area: img;
+}
+
+#list1 {
+  grid-area: list1;
+}
+
+#list2 {
+  grid-area: list2;
+}
+
+@media screen and (min-width: 600px) {
+  .sredina {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "img list1"
+      "img list2";
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .sredina {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "list1 img list2";
+  }
+}
+
+/* TEST */
+
+.sredina {
+  outline: 1px dashed red;
+  justify-content: center;
+  align-items: center;
+}
+
+#list1,
+#list2 {
+  width: 100%;
+}
+
+/* LINES  */
+
+.lines {
+  display: flex;
+  /* outline: 1px dashed red; */
+  width: 1300px;
+  max-width: 80%;
+  height: 100px;
+  margin: 100px auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+  /* outline: 1px dashed darksalmon; */
+}
+
+.line1 {
+  /* margin: 10px auto; */
+  /* padding: 10px; */
+  width: 1px;
+  max-width: 200%;
+  /* outline: 1px dashed blue; */
+  border-top: 4px solid #f3f3f7;
+  /* height: 5px; */
+  transition: all 2s;
+  /* margin-right: 150px; */
+  /* margin-left: 30px; */
+}
+
+.line2 {
+  border-top: 4px solid #f3f3f7;
+  width: 1px;
+  transition: all 2s;
+  /* margin-left: 150px; */
+  /* margin-right: 30px; */
+}
+
+.svg-icona {
+  margin: 0 12rem;
+}
+
+.haha {
+  transform: scale(200, 1);
+  transition: all 2s;
+}
+
+.kakaka {
+  max-width: 100%;
+  width: 100px;
+  opacity: 0;
+  margin-top: 200px;
+}
+
+.imgshow {
+  opacity: 1;
+  transform: translateY(-100px);
+  transition: all 2s;
+}
+
+@media (max-width: 700px) {
+  .svg-icona {
+    margin: 0 6rem;
+  }
+  .haha {
+    transform: scale(100, 1);
+    transition: all 2s;
+  }
+}
+
+/* NOVI HEADER */
+
+.landscape {
+  background: var(--c1);
+  background-color: #eec5b9;
+  height: 75vh;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  /* outline: 4px dashed red; */
+}
+.landscape__layer {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translateY(calc(var(--scrollPos, 0) * var(--offset, 0)));
+}
+
+.landscape__image {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  max-height: 100%;
+  max-height: 60%;
+  max-width: 300%;
+  max-width: 250%;
+  min-width: 100%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 2000px;
+  /* outline: 1px dashed blue; */
+}
+.landscape__image svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/**
+ * Styles for demo
+ */
+/* html {
+  --c0: #feebe2;
+  --c1: #ffe2a6;
+  --c2: #ffb06d;
+  --c3: #ff9d60;
+  --c4: #ff8f4c;
+  --c5: #fc813a;
+  --c6: #f04f30;
+  --c7: #d2353a;
+  --c8: #8b1036;
+  --c9: #620a38;
+  --c10: #2f1121;
+} */
+
+body {
+  background: var(--c10);
+  /* background-color: #eec5b9; */
+  background-color: #281f32;
+  color: #fff;
+  min-height: 200vh;
+  margin: 0;
+}
+
+.wrap {
+  margin: 5rem auto;
+  max-width: 70rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--c6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landscape__layer {
+    transform: translateY(0);
+  }
+}
+
+/* DODATNO U NOVI HEADER */
+
+h1 {
+  text-align: center;
+  font-family: "Castoro Titling", serif;
+  font-size: 10rem;
+  /* line-height: 1.5; */
+  letter-spacing: 5px;
+  color: #623cea;
+  color: #2e2c40;
+  color: #006989;
+  color: #b43e8f;
+  color: #3f4263;
+  font-weight: 600;
+  margin-top: 10rem;
+
+  /* text-transform: uppercase; */
+  /* outline: 1px dashed red; */
+  /* text-shadow: 3px 3px #7e89be; */
+}
+
+.podnaslov {
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 15px;
+  font-weight: 600;
+  text-align: center;
+  /* outline: 1px dashed blue; */
+  padding-left: 8px;
+  text-shadow: none;
+}
+
+.prva-poruka {
+  /* width: 120ch; */
+  margin: 0 auto;
+  color: #f3f3f7;
+  line-height: 1.5;
+}
+
+.prva-poruka p {
+  text-align: center;
+  font-size: 3rem;
+  font-family: Josefin Sans, sans-serif;
+  max-width: 44ch;
+  margin: 0 auto;
+}
+
+/* .fade-up {
+  animation: fadeInUp 3s forwards;
+  opacity: 0;
+} */
+
+.approach-h2 {
+  margin-top: 30rem;
+}
+
+.hiddenshit {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 1s;
+}
+
+.showshit {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(-0%);
+}
+
+.approach-p {
+  transition-delay: 0.5s;
+  font-size: 2.2rem;
+}
+
+.approach-flex {
+  margin-top: 20rem;
+  overflow: hidden;
+}
+
+.odlijeva {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-50%);
+  transition: all 1s;
+  transition-delay: 1s;
+}
+
+.oddesna {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(50%);
+  transition: all 1s;
+  transition-delay: 1s;
+}
+
+.pojavise {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0%);
+}
+
+.desni-oblak {
+  /* display: none; */
+  animation: lijevo-desno 7s ease infinite;
+  /* transform-origin: 132px 62px; */
+  transform-origin: center center;
+  transform-box: fill-box;
+}
+
+.lijevi-oblak {
+  /* display: none; */
+  animation: lijevo-desno 7s ease infinite;
+  /* transform-origin: 132px 62px; */
+  transform-origin: center center;
+  transform-box: fill-box;
+}
+.lijevi-oblak2 {
+  /* display: none; */
+  animation: lijevo-desno 7s ease infinite;
+  /* transform-origin: 132px 62px; */
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation-delay: 2s;
+}
+
+.desno-srce {
+  animation: beat 3s linear infinite;
+  /* transform-origin: 132px 62px; */
+  transform-origin: center center;
+  transform-box: fill-box;
+}
+
+.desno-srce2 {
+  animation: beat 3s linear infinite;
+  /* transform-origin: 132px 62px; */
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation-delay: 1s;
+}
+
+.desno-srce3 {
+  animation: beat 3s linear infinite;
+  /* transform-origin: 132px 62px; */
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation-delay: 1.5s;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(200%);
+  }
+  0% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes lijevo-desno {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  0% {
+    transform: translateX(0%);
+  }
+}
+
+.pocetak-container #learn,
+.pocetak-container #teach {
+  background-color: #2e2c40;
+  background-color: #281f32;
+}
+
+.pocetak-container {
+  color: #eae6ef;
+}
+
+.pocetak-container h1 {
+  font-family: Josefin Sans;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-size: 6.5rem;
+  text-align: left;
+  color: #eae6ef;
+}
+
+.pocetak-container a {
+  display: none;
+}
+
+.pocetak-container p {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: left;
+  color: #eae6ef;
+}
+
+.sredina {
+  outline: none;
+}
+
+.sredina svg {
+  display: block;
+}
+
+.sredina h3 {
+  color: #fdd3d4;
+  color: #af9ecc;
+  color: #f4e5e4;
+  color: #7e89be;
+}
+
+.pojmanemam {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 2s;
+  /* transition-delay: 1s; */
+}
+
+.pojmadesna {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0%);
+}
+
+.lijevopojma {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 2s;
+}
+
+.pojmalijeva {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0%);
+}
+
+.svg-header {
+  height: 100vh;
+  background-size: auto;
+}
+
+body p,
+h1,
+h2,
+h3 {
+  color: #eae6ef;
+}
+
+.landscape h1 {
+  color: #463758;
+  font-size: clamp(3rem, 12vw + 1rem, 8rem);
+}
+
+h1 p {
+  color: inherit;
+}

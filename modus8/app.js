@@ -76,7 +76,7 @@ const observer4 = new IntersectionObserver((entries) => {
 const hiddenElements4 = document.querySelectorAll(".sredina-svgg");
 hiddenElements4.forEach((el) => observer4.observe(el));
 
-let triggerdesni = document.querySelector(".pojmanemam");
+let triggerdesni = document.querySelector(".desnopojma");
 
 // josssss
 

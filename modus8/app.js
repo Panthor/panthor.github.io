@@ -4,9 +4,9 @@ const observer2 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
     if (entry.isIntersecting) {
-      tocka.classList.add("haha");
+      tocka.classList.add("anim");
 
-      tocka2.classList.add("haha");
+      tocka2.classList.add("anim");
       tocka3.classList.add("imgshow");
     }
   });
@@ -17,7 +17,7 @@ hiddenElements2.forEach((el) => observer2.observe(el));
 
 let tocka = document.querySelector(".line1");
 let tocka2 = document.querySelector(".line2");
-let tocka3 = document.querySelector(".kakaka");
+let tocka3 = document.querySelector(".prva-ikona");
 
 // NOVI HEADER
 
@@ -52,17 +52,17 @@ const observer3 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
     if (entry.isIntersecting) {
-      trigger.classList.add("showshit");
-      trigger2.classList.add("showshit");
+      trigger.classList.add("show");
+      trigger2.classList.add("show");
     }
   });
 });
 
-const hiddenElements3 = document.querySelectorAll(".approach-h2");
+const hiddenElements3 = document.querySelectorAll(".uvod-h2");
 hiddenElements3.forEach((el) => observer3.observe(el));
 
-let trigger = document.querySelector(".approach-h2");
-let trigger2 = document.querySelector(".approach-p");
+let trigger = document.querySelector(".uvod-h2");
+let trigger2 = document.querySelector(".uvod-p");
 
 const observer4 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -106,7 +106,7 @@ const observer6 = new IntersectionObserver((entries) => {
   });
 });
 
-const hiddenElements6 = document.querySelectorAll(".approach-flex");
+const hiddenElements6 = document.querySelectorAll(".uvod-flex");
 hiddenElements6.forEach((el) => observer6.observe(el));
 
 let trigger3 = document.querySelector(".odlijeva");

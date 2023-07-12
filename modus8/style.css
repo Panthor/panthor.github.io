@@ -59,7 +59,7 @@ DESIGNED WITH AND SVG
 POCETAK CONTAINER
 ************************************************************************************************/
 
-.learn {
+.l-tekst {
   text-align: left;
   width: 50%;
   background-color: #000;
@@ -67,7 +67,7 @@ POCETAK CONTAINER
   /* border-right: 1px dashed red; */
 }
 
-.teach {
+.d-slika {
   width: 50%;
   background-color: #000;
 }
@@ -89,11 +89,11 @@ POCETAK CONTAINER
   margin: 0px auto;
 }
 
-.learn {
+.l-tekst {
   background-color: inherit;
 }
 
-.teach {
+.d-slika {
   background-color: inherit;
 }
 
@@ -115,17 +115,17 @@ POCETAK CONTAINER
     width: 100%;
     /* height: 50%; */
   }
-  .learn {
+  .l-tekst {
     width: 100%;
     border-right: none;
     /* border-bottom: 1px dashed red; */
     text-align: center;
   }
-  .teach {
+  .d-slika {
     width: 100%;
   }
 
-  .teach svg {
+  .d-slika svg {
     width: 70%;
   }
 }
@@ -253,10 +253,10 @@ SVG HEADER
 }
 
 /*************************************************************************************************************
-APPROACH
+uvod
 *************************************************************************************************************/
 
-.approach {
+.uvod {
   line-height: 1.5;
   margin: 20rem auto;
   max-width: 1300px;
@@ -266,12 +266,12 @@ APPROACH
   flex-direction: column;
 }
 
-.approach-h2 {
+.uvod-h2 {
   line-height: 1;
   font-size: 8rem;
 }
 
-.approach-p {
+.uvod-p {
   max-width: 60ch;
   /* width: 40ch; */
   text-align: center;
@@ -280,10 +280,10 @@ APPROACH
 }
 
 @media screen and (max-width: 663px) {
-  .approach-h2 {
+  .uvod-h2 {
     font-size: 4rem;
   }
-  .approach-p {
+  .uvod-p {
     /* color: red; */
     font-size: 1.7rem;
     max-width: 40ch;
@@ -291,10 +291,10 @@ APPROACH
 }
 
 /*******************************************************************************************************
-APPROACH FLEX
+uvod FLEX
 ********************************************************************************************************/
 
-.approach-flex {
+.uvod-flex {
   display: flex;
   /* outline: 1px dashed red; */
   margin: 7rem auto;
@@ -343,7 +343,7 @@ APPROACH FLEX
 }
 
 @media screen and (max-width: 767px) {
-  .approach-flex {
+  .uvod-flex {
     flex-direction: column;
   }
   .lijevo {
@@ -360,7 +360,7 @@ APPROACH FLEX
   .desno .pristup-naslov {
     text-align: center;
   }
-  .approach p {
+  .uvod p {
     padding-right: 2rem;
     padding-left: 2rem;
   }
@@ -489,12 +489,12 @@ h3 {
   margin: 0 12rem;
 }
 
-.haha {
+.anim {
   transform: scale(200, 1);
   transition: all 2s;
 }
 
-.kakaka {
+.prva-ikona {
   max-width: 100%;
   width: 100px;
   opacity: 0;
@@ -511,7 +511,7 @@ h3 {
   .svg-icona {
     margin: 0 6rem;
   }
-  .haha {
+  .anim {
     transform: scale(100, 1);
     transition: all 2s;
   }
@@ -655,29 +655,29 @@ h1 {
   opacity: 0;
 } */
 
-.approach-h2 {
+.uvod-h2 {
   margin-top: 30rem;
 }
 
-.hiddenshit {
+.hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translateY(100%);
   transition: all 1s;
 }
 
-.showshit {
+.show {
   opacity: 1;
   filter: blur(0);
   transform: translateY(-0%);
 }
 
-.approach-p {
+.uvod-p {
   transition-delay: 0.5s;
   font-size: 2.2rem;
 }
 
-.approach-flex {
+.uvod-flex {
   margin-top: 20rem;
   overflow: hidden;
 }
@@ -773,12 +773,6 @@ h1 {
   0% {
     transform: translateX(0%);
   }
-}
-
-.pocetak-container #learn,
-.pocetak-container #teach {
-  background-color: #2e2c40;
-  background-color: #281f32;
 }
 
 .pocetak-container {

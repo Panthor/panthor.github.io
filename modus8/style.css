@@ -254,6 +254,7 @@ SVG HEADER
   background-color: #af8cad;
   background-color: #9e81a8;
   background-color: #84617e;
+  position: relative;
 }
 
 /*************************************************************************************************************
@@ -875,6 +876,7 @@ footer {
   background-color: #af8cad;
   background-color: #9e81a8;
   background-color: #84617e;
+  /* position: relative; */
 }
 
 .layer {
@@ -882,4 +884,55 @@ footer {
   background-color: #9e81a8;
   background-color: #84617e;
   margin-bottom: 15rem;
+}
+
+.contact {
+  width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+  transform: translateY(-7rem);
+  color: #eae6ef;
+}
+
+.contact h2 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  line-height: 1.5;
+  font-size: 2rem;
+}
+
+.mail-tekst {
+  margin-top: 2rem;
+}
+
+p.mail,
+p.telefon {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bottom p {
+  color: #281f32;
+}
+
+@media (max-width: 573px) {
+  .contact h2 {
+    font-size: 4rem;
+  }
+  .contact p {
+    font-size: 1.9rem;
+  }
 }

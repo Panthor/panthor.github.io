@@ -242,7 +242,8 @@ SVG HEADER
 ***********************/
 
 .svg-header {
-  max-width: 1300px;
+  width: 100%;
+  /* max-width: 1300px; */
   background-image: url(img/headersvg.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -250,6 +251,9 @@ SVG HEADER
   background-attachment: scroll;
   height: 100vh;
   margin: 0 auto;
+  background-color: #af8cad;
+  background-color: #9e81a8;
+  background-color: #84617e;
 }
 
 /*************************************************************************************************************
@@ -861,4 +865,21 @@ h3 {
 
 h1 p {
   color: inherit;
+}
+
+/******************************************************************************
+FOOTER
+*******************************************************************************/
+
+footer {
+  background-color: #af8cad;
+  background-color: #9e81a8;
+  background-color: #84617e;
+}
+
+.layer {
+  background-color: #af8cad;
+  background-color: #9e81a8;
+  background-color: #84617e;
+  margin-bottom: 15rem;
 }

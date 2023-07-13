@@ -31,9 +31,9 @@ DESIGNED WITH AND SVG
 }
 
 .bottom svg {
-  height: 2em;
-  width: 2em;
-  fill: #e76f51;
+  height: 1.5em;
+  width: 1.5em;
+  /* fill: #e76f51; */
   animation: beating-heart 2s infinite;
 }
 

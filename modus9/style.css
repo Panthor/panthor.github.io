@@ -458,7 +458,7 @@ h3 {
 
 .lines {
   display: flex;
-  /* outline: 1px dashed red; */
+  outline: 1px dashed red;
   width: 1300px;
   max-width: 80%;
   height: 100px;
@@ -516,6 +516,9 @@ h3 {
 @media (max-width: 700px) {
   .svg-icona {
     margin: 0 6rem;
+  }
+  .prva-ikona {
+    width: 50px;
   }
   .anim {
     transform: scale(100, 1);

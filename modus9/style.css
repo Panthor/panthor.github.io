@@ -520,7 +520,7 @@ h3 {
     margin: 0 6rem;
   }
   .anim {
-    transform: scale(70, 1);
+    transform: scale(60, 1);
     transition: all 2s;
   }
 }

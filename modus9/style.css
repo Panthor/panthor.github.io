@@ -468,6 +468,8 @@ h3 {
   align-items: center;
   margin-top: 20rem;
   /* outline: 1px dashed darksalmon; */
+  gap: 10px;
+  overflow: hidden;
 }
 
 .line1 {
@@ -517,7 +519,6 @@ h3 {
   .svg-icona {
     margin: 0 6rem;
   }
-
   .anim {
     transform: scale(100, 1);
     transition: all 2s;

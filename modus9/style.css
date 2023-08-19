@@ -517,9 +517,7 @@ h3 {
   .svg-icona {
     margin: 0 6rem;
   }
-  .prva-ikona {
-    width: 50px;
-  }
+
   .anim {
     transform: scale(100, 1);
     transition: all 2s;

@@ -136,6 +136,7 @@ button.addEventListener("click", () => {
   theme_light.classList.toggle("change-theme-light");
   head_color.classList.toggle("head-color-change");
   head_brain.classList.toggle("head-brain-change");
+  // text_accent.classList.toggle("dark-accent");
   // brain_linije.classList.toggle("brain-linije-change");
   brain_linije.forEach((el) => {
     el.classList.toggle("brain-linije-change");
@@ -148,6 +149,9 @@ button.addEventListener("click", () => {
   });
   head_accent.forEach((el) => {
     el.classList.toggle("head-accent-change");
+  });
+  text_accent.forEach((el) => {
+    el.classList.toggle("dark-accent");
   });
 });
 
@@ -173,6 +177,7 @@ let brain_linije = document.querySelectorAll(".brain-linije");
 let rect_lighter = document.querySelectorAll(".rect-lighter");
 let rect_darker = document.querySelectorAll(".rect-darker");
 let head_accent = document.querySelectorAll(".head-accent");
+let text_accent = document.querySelectorAll(".light-accent");
 
 // novo navigacija
 

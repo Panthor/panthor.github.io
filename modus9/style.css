@@ -378,8 +378,8 @@ SREDINA
 /* Generic Styles */
 
 h3 {
-  color: #2754b3;
-  color: #f9b7c8;
+  /* color: #2754b3;
+  color: #f9b7c8; */
   margin-bottom: 1rem;
   font-size: 2rem;
 }
@@ -810,14 +810,6 @@ h1 {
   display: block;
 }
 
-.sredina h3 {
-  color: #fdd3d4;
-  color: #af9ecc;
-  color: #f4e5e4;
-  color: #7e89be;
-  /* color: #6b96af; */
-}
-
 .desnopojma {
   opacity: 0;
   filter: blur(5px);
@@ -1174,4 +1166,16 @@ bez animacija
     /*CSS animations*/
     /* animation: none !important; */
   }
+}
+
+/******************************************************************************
+ACCENT
+*******************************************************************************/
+
+.light-accent {
+  color: #e89aa3;
+}
+
+.dark-accent {
+  color: #86b5a2;
 }

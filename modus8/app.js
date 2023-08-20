@@ -136,6 +136,7 @@ button.addEventListener("click", () => {
   theme_light.classList.toggle("change-theme-light");
   head_color.classList.toggle("head-color-change");
   head_brain.classList.toggle("head-brain-change");
+  // text_accent.classList.toggle("dark-accent");
   // brain_linije.classList.toggle("brain-linije-change");
   brain_linije.forEach((el) => {
     el.classList.toggle("brain-linije-change");
@@ -148,6 +149,9 @@ button.addEventListener("click", () => {
   });
   head_accent.forEach((el) => {
     el.classList.toggle("head-accent-change");
+  });
+  text_accent.forEach((el) => {
+    el.classList.toggle("dark-accent");
   });
 });
 
@@ -173,3 +177,46 @@ let brain_linije = document.querySelectorAll(".brain-linije");
 let rect_lighter = document.querySelectorAll(".rect-lighter");
 let rect_darker = document.querySelectorAll(".rect-darker");
 let head_accent = document.querySelectorAll(".head-accent");
+let text_accent = document.querySelectorAll(".light-accent");
+
+// novo navigacija
+
+// let timVine = document.getElementById("tim-vine");
+// let navbar = document.getElementById("main-nav");
+
+// let navPos = navbar.getBoundingClientRect().top;
+
+// window.addEventListener("scroll", (e) => {
+//   let scrollPos = window.scrollY;
+//   if (scrollPos > navPos) {
+//     console.log(scrollPos, navPos);
+//     navbar.classList.add("sticky");
+//     header.classList.add("navbarOffsetMargin");
+//   } else {
+//     navbar.classList.remove("sticky");
+//     header.classList.remove("navbarOffsetMargin");
+//   }
+// });
+
+// // w3schools navigacija
+
+// // When the user scrolls the page, execute myFunction
+// window.onscroll = function () {
+//   myFunction();
+// };
+
+// // Get the navbar
+// var navbar = document.getElementById("main-nav");
+
+// // Get the offset position of the navbar
+// var sticky = navbar.offsetTop;
+
+// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// function myFunction() {
+//   console.log(window.scrollY, sticky);
+//   if (window.scrollY >= sticky) {
+//     navbar.classList.add("sticky");
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }

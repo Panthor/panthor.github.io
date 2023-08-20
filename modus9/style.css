@@ -1160,7 +1160,13 @@ bez animacija
   /*CSS animations*/
   /* animation: none !important; */
   .uvod-h2,
-  .uvod-p {
+  .uvod-p,
+  .odlijeva,
+  .oddesna,
+  .lijevopojma,
+  .pojmalijeva,
+  .desnopojma,
+  .pojmadesno {
     /*CSS transitions*/
     transition-property: none !important;
     /*CSS transforms*/

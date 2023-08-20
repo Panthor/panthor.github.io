@@ -951,7 +951,7 @@ LIGHT/DARK MODE
   display: flex;
   justify-content: flex-end;
   right: 8%;
-  margin-top: 2%;
+  margin-top: 5%;
   cursor: pointer;
   z-index: 1;
 }
@@ -1189,7 +1189,6 @@ ACCENT
   .pocetak-container h1,
   .pocetak-paragraf {
     text-align: center;
-    margin: 0 3rem;
   }
   .prva-poruka {
     margin: 0 3rem;

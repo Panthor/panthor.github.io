@@ -951,7 +951,7 @@ LIGHT/DARK MODE
   display: flex;
   justify-content: flex-end;
   right: 8%;
-  margin-top: 2%;
+  margin-top: 5%;
   cursor: pointer;
   z-index: 1;
 }

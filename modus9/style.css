@@ -951,7 +951,7 @@ LIGHT/DARK MODE
   display: flex;
   justify-content: flex-end;
   right: 8%;
-  margin-top: 5%;
+  margin-top: 2%;
   cursor: pointer;
   z-index: 1;
 }
@@ -1202,5 +1202,8 @@ ACCENT
   .sredina > svg {
     width: 70%;
     margin: 10rem auto;
+  }
+  .nav-button {
+    margin-top: 5%;
   }
 }

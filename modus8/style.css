@@ -178,6 +178,7 @@ h1,
 }
 .pocetak-paragraf {
   animation-delay: 0.3s;
+  text-align: left;
 }
 .mojedugme {
   animation-delay: 0.6s;
@@ -328,6 +329,12 @@ uvod FLEX
   text-align: left;
   /* width: 70ch; */
   /* margin-bottom: 2rem; */
+}
+
+@media screen and (max-width: 768px) {
+  .desno {
+    margin-top: 5rem;
+  }
 }
 
 .desno p {
@@ -795,10 +802,8 @@ h1 {
 }
 
 .pocetak-container p {
-  text-align: center;
   margin-top: 2rem;
   font-size: 2rem;
-  text-align: left;
   color: inherit;
 }
 
@@ -1178,4 +1183,15 @@ ACCENT
 
 .dark-accent {
   color: #67a28a;
+}
+
+@media screen and (max-width: 768px) {
+  .pocetak-container h1,
+  .pocetak-paragraf {
+    text-align: center;
+    margin: 0 3rem;
+  }
+  .prva-poruka {
+    margin: 0 3rem;
+  }
 }

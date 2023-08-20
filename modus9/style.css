@@ -1150,13 +1150,21 @@ bez animacija
 *******************************************************************************/
 
 @media screen and (max-width: 768px) {
-  *,
+  /* *,
   *:before,
-  *:after {
+  *:after  */
+  /*CSS transitions*/
+  /* transition-property: none !important; */
+  /*CSS transforms*/
+  /* transform: none !important; */
+  /*CSS animations*/
+  /* animation: none !important; */
+  .uvod-h2,
+  .uvod-p {
     /*CSS transitions*/
-    /* transition-property: none !important; */
+    transition-property: none !important;
     /*CSS transforms*/
-    /* transform: none !important; */
+    transform: none !important;
     /*CSS animations*/
     /* animation: none !important; */
   }

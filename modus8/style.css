@@ -951,7 +951,7 @@ LIGHT/DARK MODE
   display: flex;
   justify-content: flex-end;
   right: 8%;
-  margin-top: 5%;
+  margin-top: 2%;
   cursor: pointer;
   z-index: 1;
 }
@@ -1193,5 +1193,15 @@ ACCENT
   }
   .prva-poruka {
     margin: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sredina {
+    text-align: center;
+  }
+  .sredina > svg {
+    width: 70%;
+    margin: 10rem auto;
   }
 }

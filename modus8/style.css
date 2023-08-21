@@ -696,7 +696,7 @@ h1 {
   filter: blur(5px);
   transform: translateX(-50%);
   transition: all 1s;
-  transition-delay: 1s;
+  transition-delay: 0.5s;
 }
 
 .oddesna {
@@ -1222,4 +1222,42 @@ footer accent
   .contact {
     transform: translateY(10rem);
   }
+  /* .layer {
+    margin-bottom: 1rem;
+  } */
 }
+
+/******************************************************************************
+accordion sekcija
+******************************************************************************/
+
+/* .accordion-sekcija {
+  height: 70vh;
+  background-color: #af8cad;
+  margin-top: 40rem;
+}
+
+.accordion-sekcija svg {
+  fill: #af8cad;
+  margin-top: -20rem;
+}
+
+.mapa {
+  /* padding-top: 60px; */
+/* background-color: #f6c8a2; */
+/* padding-bottom: 60px; */
+/* display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20rem;
+  padding-right: 20rem;
+} */
+
+/* iframe {
+  vertical-align: bottom;
+  /* filter: grayscale(80%); */
+/* width: 98%; */
+/* outline: 1px solid blue; */
+/* border-radius: 10px;
+  box-shadow: var(--shadow);
+}   */

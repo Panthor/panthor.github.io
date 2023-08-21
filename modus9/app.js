@@ -1,16 +1,21 @@
 //pozdravna svg animacija
 
-const observer2 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      tocka.classList.add("anim");
+const observer2 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        tocka.classList.add("anim");
 
-      tocka2.classList.add("anim");
-      tocka3.classList.add("imgshow");
-    }
-  });
-});
+        tocka2.classList.add("anim");
+        tocka3.classList.add("imgshow");
+      }
+    });
+  },
+  {
+    rootMargin: "-400px",
+  }
+);
 
 const hiddenElements2 = document.querySelectorAll(".line1");
 hiddenElements2.forEach((el) => observer2.observe(el));
@@ -48,15 +53,20 @@ window.requestAnimationFrame(animation);
 // animacije all around fadeIn
 //
 
-const observer3 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      trigger.classList.add("show");
-      trigger2.classList.add("show");
-    }
-  });
-});
+const observer3 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        trigger.classList.add("show");
+        trigger2.classList.add("show");
+      }
+    });
+  },
+  {
+    rootMargin: "-300px",
+  }
+);
 
 const hiddenElements3 = document.querySelectorAll(".uvod-h2");
 hiddenElements3.forEach((el) => observer3.observe(el));
@@ -64,14 +74,19 @@ hiddenElements3.forEach((el) => observer3.observe(el));
 let trigger = document.querySelector(".uvod-h2");
 let trigger2 = document.querySelector(".uvod-p");
 
-const observer4 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      triggerdesni.classList.add("pojmadesna");
-    }
-  });
-});
+const observer4 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        triggerdesni.classList.add("pojmadesna");
+      }
+    });
+  },
+  {
+    rootMargin: "-400px",
+  }
+);
 
 const hiddenElements4 = document.querySelectorAll(".sredina-svgg");
 hiddenElements4.forEach((el) => observer4.observe(el));
@@ -80,14 +95,19 @@ let triggerdesni = document.querySelector(".desnopojma");
 
 // josssss
 
-const observer5 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      triggerlijevi.classList.add("pojmalijeva");
-    }
-  });
-});
+const observer5 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        triggerlijevi.classList.add("pojmalijeva");
+      }
+    });
+  },
+  {
+    rootMargin: "-400px",
+  }
+);
 
 const hiddenElements5 = document.querySelectorAll(".sredina-svgg");
 hiddenElements5.forEach((el) => observer5.observe(el));
@@ -96,15 +116,21 @@ let triggerlijevi = document.querySelector(".lijevopojma");
 
 // sredina lijevo i desno
 
-const observer6 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      trigger3.classList.add("pojavise");
-      trigger4.classList.add("pojavise");
-    }
-  });
-});
+const observer6 = new IntersectionObserver(
+  (entries, options) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        trigger3.classList.add("pojavise");
+        trigger4.classList.add("pojavise");
+      }
+    });
+  },
+  {
+    // rootMargin: "-300px",
+    threshold: 0.5,
+  }
+);
 
 const hiddenElements6 = document.querySelectorAll(".uvod-flex");
 hiddenElements6.forEach((el) => observer6.observe(el));

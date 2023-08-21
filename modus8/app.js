@@ -127,7 +127,8 @@ const observer6 = new IntersectionObserver(
     });
   },
   {
-    rootMargin: "-300px",
+    // rootMargin: "-300px",
+    threshold: 0.5,
   }
 );
 

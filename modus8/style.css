@@ -915,8 +915,6 @@ p.mail,
 p.telefon {
   font-weight: bold;
   font-size: 3rem;
-  color: #e89aa3;
-  color: #e17a86;
 }
 
 .bottom {
@@ -1206,4 +1204,16 @@ ACCENT
   .nav-button {
     margin-top: 5%;
   }
+}
+
+/******************************************************************************
+footer accent
+*******************************************************************************/
+
+.footer-accent {
+  color: #e17a86;
+}
+
+.footer-light-accent {
+  color: #cafbe7;
 }

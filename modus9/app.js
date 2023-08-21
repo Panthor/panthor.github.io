@@ -153,6 +153,9 @@ button.addEventListener("click", () => {
   text_accent.forEach((el) => {
     el.classList.toggle("dark-accent");
   });
+  footer_accent.forEach((el) => {
+    el.classList.toggle("footer-light-accent");
+  });
 });
 
 let brdo12 = document.querySelector(".brdo1");
@@ -178,6 +181,7 @@ let rect_lighter = document.querySelectorAll(".rect-lighter");
 let rect_darker = document.querySelectorAll(".rect-darker");
 let head_accent = document.querySelectorAll(".head-accent");
 let text_accent = document.querySelectorAll(".light-accent");
+let footer_accent = document.querySelectorAll(".footer-accent");
 
 // novo navigacija
 

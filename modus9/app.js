@@ -64,7 +64,8 @@ const observer3 = new IntersectionObserver(
     });
   },
   {
-    rootMargin: "-300px",
+    // rootMargin: "-300px",
+    threshold: 1.0,
   }
 );
 
@@ -84,7 +85,8 @@ const observer4 = new IntersectionObserver(
     });
   },
   {
-    rootMargin: "-400px",
+    // rootMargin: "-400px",
+    threshold: 0.4,
   }
 );
 
@@ -105,7 +107,8 @@ const observer5 = new IntersectionObserver(
     });
   },
   {
-    rootMargin: "-400px",
+    // rootMargin: "-400px",
+    threshold: 0.4,
   }
 );
 

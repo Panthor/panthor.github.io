@@ -480,16 +480,16 @@ h3 {
 }
 
 .line1 {
-  width: 1px;
+  width: 0px;
 
-  border-top: 4px solid #f3f3f7;
+  border-top: 2px solid #f3f3f7;
 
   transition: all 2s;
 }
 
 .line2 {
-  border-top: 4px solid #f3f3f7;
-  width: 1px;
+  border-top: 2px solid #f3f3f7;
+  width: 0px;
   transition: all 2s;
 }
 
@@ -497,8 +497,14 @@ h3 {
   margin: 0 12rem;
 }
 
-.anim {
-  transform: scale(200, 1);
+.anim1 {
+  width: 1px;
+  transform: scaleX(-220);
+  transition: all 2s;
+}
+.anim2 {
+  width: 1px;
+  transform: scaleX(220);
   transition: all 2s;
 }
 
@@ -997,11 +1003,11 @@ h1 {
 }
 
 .line1-dark {
-  border-top: 4px solid #4d5057;
+  border-top: 3px solid #4d5057;
 }
 
 .line2-dark {
-  border-top: 4px solid #4d5057;
+  border-top: 3px solid #4d5057;
 }
 
 /******************************************************************************

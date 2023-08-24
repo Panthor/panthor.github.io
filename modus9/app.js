@@ -5,15 +5,16 @@ const observer2 = new IntersectionObserver(
     entries.forEach((entry) => {
       console.log(entry);
       if (entry.isIntersecting) {
-        tocka.classList.add("anim");
+        tocka.classList.add("anim1");
 
-        tocka2.classList.add("anim");
+        tocka2.classList.add("anim2");
         tocka3.classList.add("imgshow");
       }
     });
   },
   {
-    rootMargin: "-400px",
+    rootMargin: "-200px",
+    // threshold: 2,
   }
 );
 

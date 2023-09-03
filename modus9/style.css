@@ -6,16 +6,23 @@ GENERAL
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Josefin Sans", sans-serif;
+  /* font-family: "Josefin Sans", sans-serif; */
   color: inherit;
 }
 
 html {
   font-size: 62.5%;
+  font-family: Josefin Sans, sans-serif;
+  letter-spacing: normal;
 }
 
 p {
   font-size: 1.8rem;
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("font/OpenDyslexic-Regular.otf");
 }
 
 /******************************************************************************
@@ -659,7 +666,7 @@ h1 {
 .prva-poruka p {
   text-align: center;
   font-size: 3rem;
-  font-family: Josefin Sans, sans-serif;
+  /* font-family: Josefin Sans, sans-serif; */
   max-width: 44ch;
   margin: 0 auto;
 }
@@ -795,8 +802,8 @@ h1 {
   color: inherit;
 }
 
-.pocetak-container h1 {
-  font-family: Josefin Sans;
+.pocetak-container h2 {
+  /* font-family: Josefin Sans; */
   letter-spacing: 2px;
   line-height: 1;
   font-size: 6.5rem;
@@ -958,6 +965,7 @@ LIGHT/DARK MODE
   margin-top: 2%;
   cursor: pointer;
   z-index: 1;
+  transition: transform 0.6s ease;
 }
 
 .nav-button svg {
@@ -1083,7 +1091,7 @@ BRDA
 
 .glavni-naslov {
   color: #281f32;
-  transition: 2s ease;
+  transition: animation 2s ease, opacity 2s ease;
 }
 
 .glavni-naslov-light {
@@ -1292,11 +1300,20 @@ Rijesenje problema prikaza elemenata na mobu sa novim Int.obs.
 }
 
 /******************************************************************************
+Nav button hover animacija
+******************************************************************************/
+
+.nav-button:hover {
+  transform: scale(1.2, 1.2) rotate(30deg);
+  transition: transform 0.2s ease;
+}
+
+/******************************************************************************
 body background - odabir teme problem sa transition cekanjem
 ******************************************************************************/
 
 body {
-  transition: 2s ease;
+  transition: background-color 2s ease;
 }
 
 /* mozes kao transition: all ili nesto specificno */
@@ -1304,3 +1321,343 @@ body {
   color: plum;
   transition: 2s;
 } */
+
+/******************************************************************************
+Accessibility
+******************************************************************************/
+
+@media (prefers-color-scheme: light) {
+  .glavni-naslov {
+    /* outline: 1px dashed plum; */
+  }
+}
+
+@media (prefers-contrast: more) {
+  .glavni-naslov {
+    outline: 1px dashed red;
+  }
+}
+
+/******************************************************************************
+Accessibility - tezi dio
+******************************************************************************/
+
+.size1 {
+  font-size: 12px;
+}
+
+.size2 {
+  font-size: 14px;
+}
+
+.size3 {
+  font-size: 16px;
+}
+
+.size4 {
+  font-size: 18px;
+}
+
+.spacing1 {
+  letter-spacing: 0.05rem;
+}
+
+.spacing2 {
+  letter-spacing: 0.1rem;
+}
+
+.spacing3 {
+  letter-spacing: 0.15rem;
+}
+
+.spacing4 {
+  letter-spacing: 0.2rem;
+}
+
+.typography1 {
+  font-family: Georgia, Arial, serif !important;
+  font-family: "opendyslexic" !important;
+}
+
+.links1 a {
+  text-decoration: underline !important;
+  background-color: #fdff32;
+  color: #000;
+}
+
+.contrast1 {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.contrast2 {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.contrast3 {
+  -webkit-filter: contrast(200%);
+  filter: contrast(200%);
+}
+
+.contrast4 {
+  -webkit-filter: contrast(75%);
+  filter: contrast(75%);
+}
+
+.cursor1,
+.cursor1 a,
+.cursor1 button {
+  cursor: url("/images/a11y/a11y-cursor.png"), auto !important;
+}
+
+.a11y-panel {
+  position: fixed;
+  z-index: 10000;
+  top: 20px;
+  right: -360px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 360px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #ccc;
+  background-color: #fff;
+  transition: transform 0.8s ease;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@media (max-width: 767px) {
+  .a11y-panel {
+    width: 200px;
+    right: -200px;
+    padding: 10px;
+    top: initial;
+    bottom: 20px;
+  }
+}
+
+.a11y-panel.selected {
+  /* right: 100px; */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.a11y-handle {
+  width: 44px;
+  height: 44px;
+  background: #1259a7;
+  background: #564b68;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  padding: 5px;
+}
+
+@media (max-width: 767px) {
+  .a11y-handle {
+    top: initial;
+    bottom: 15px;
+  }
+}
+
+.a11y-handle img {
+  max-width: 100%;
+}
+
+.a11y-title {
+  width: calc(100% + 40px);
+  background-color: #1259a7;
+  background-color: #564b68;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0;
+  margin: -20px -20px 20px;
+}
+
+@media (max-width: 767px) {
+  .a11y-title {
+    margin: -10px -10px 10px;
+  }
+}
+
+.a11y-button,
+.a11y-reset {
+  position: relative;
+  margin-top: -1px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 100%;
+  font-size: 16px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .a11y-button,
+  .a11y-reset {
+    width: 50%;
+    padding: 25px 15px;
+    margin-left: -1px;
+  }
+}
+
+.a11y-reset {
+  width: calc(100% - 1px);
+}
+
+.a11y-icon {
+  display: block;
+  width: 30px;
+  margin: 0 auto 3px;
+}
+
+@media (max-width: 767px) {
+  .a11y-icon {
+    width: 20px;
+  }
+}
+
+.a11y-name {
+  display: block;
+  letter-spacing: normal !important;
+}
+
+.a11y-panel .steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+@media (max-width: 767px) {
+  .a11y-panel .steps {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: auto;
+  }
+}
+
+.a11y-panel .steps li {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  height: 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: #eee;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+  .a11y-panel .steps li {
+    width: 10px;
+  }
+}
+
+[data-selected="1"] .steps li:nth-child(1) {
+  background-color: #564b68;
+}
+
+[data-selected="2"] .steps li:nth-child(1) {
+  background-color: #564b68;
+}
+
+[data-selected="2"] .steps li:nth-child(2) {
+  background-color: #564b68;
+}
+
+[data-selected="3"] .steps li:nth-child(1) {
+  background-color: #564b68;
+}
+
+[data-selected="3"] .steps li:nth-child(2) {
+  background-color: #564b68;
+}
+
+[data-selected="3"] .steps li:nth-child(3) {
+  background-color: #564b68;
+}
+
+[data-selected="4"] .steps li:nth-child(1) {
+  background-color: #564b68;
+}
+
+[data-selected="4"] .steps li:nth-child(2) {
+  background-color: #564b68;
+}
+
+[data-selected="4"] .steps li:nth-child(3) {
+  background-color: #564b68;
+}
+
+[data-selected="4"] .steps li:nth-child(4) {
+  background-color: #564b68;
+}
+
+#accessibility_contrast .a11y-name {
+  display: none;
+}
+
+#accessibility_contrast .a11y-name.kontrast {
+  display: block;
+}
+
+#accessibility_contrast[data-selected="1"] .a11y-name {
+  display: none !important;
+}
+
+#accessibility_contrast[data-selected="1"] .a11y-name:nth-child(2) {
+  display: block !important;
+}
+
+#accessibility_contrast[data-selected="2"] .a11y-name {
+  display: none !important;
+}
+
+#accessibility_contrast[data-selected="2"] .a11y-name:nth-child(3) {
+  display: block !important;
+}
+
+#accessibility_contrast[data-selected="3"] .a11y-name {
+  display: none !important;
+}
+
+#accessibility_contrast[data-selected="3"] .a11y-name:nth-child(4) {
+  display: block !important;
+}
+
+#accessibility_contrast[data-selected="4"] .a11y-name {
+  display: none !important;
+}
+
+#accessibility_contrast[data-selected="4"] .a11y-name:nth-child(5) {
+  display: block !important;
+}

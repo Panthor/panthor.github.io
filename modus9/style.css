@@ -625,6 +625,40 @@ a {
   .landscape__layer {
     transform: translateY(0);
   }
+  .uvod-h2,
+  .uvod-p,
+  .odlijeva,
+  .oddesna,
+  .lijevopojma,
+  .pojmalijeva,
+  .desnopojma,
+  .pojmadesno,
+  .anim1,
+  .anim2,
+  .glavni-naslov {
+    /*CSS transitions*/
+    transition-property: none !important;
+    /*CSS transforms*/
+    transform: none !important;
+    /*CSS animations*/
+    /* animation: none !important; */
+  }
+
+  .glavni-naslov {
+    opacity: 1;
+  }
+
+  .svg-icona {
+    margin: 0 2rem;
+  }
+  .prva-ikona {
+    opacity: 1;
+    transform: translateY(-100px);
+  }
+  .line1,
+  .line2 {
+    width: 200px;
+  }
 }
 
 /* DODATNO U NOVI HEADER */

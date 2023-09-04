@@ -1244,6 +1244,9 @@ ACCENT
   .prva-poruka {
     margin: 0 3rem;
   }
+  .pocetak-container h2 {
+    font-size: 5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {

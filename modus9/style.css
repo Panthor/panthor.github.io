@@ -932,7 +932,8 @@ footer {
 }
 
 .contact {
-  width: 60vw;
+  /* width: 60vw; */
+  width: 80%;
   margin: 0 auto;
   text-align: center;
   transform: translateY(-7rem);

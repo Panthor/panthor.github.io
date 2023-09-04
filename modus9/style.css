@@ -972,7 +972,7 @@ p.telefon {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 40rem;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
 }

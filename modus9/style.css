@@ -80,7 +80,7 @@ POCETAK CONTAINER
   background-color: #000;
 }
 
-.pocetak-container h1 {
+.pocetak-container h2 {
   margin: 0;
   font-size: 3rem;
   font-size: 5.1rem;
@@ -1237,7 +1237,7 @@ ACCENT
 }
 
 @media screen and (max-width: 768px) {
-  .pocetak-container h1,
+  .pocetak-container h2,
   .pocetak-paragraf {
     text-align: center;
   }

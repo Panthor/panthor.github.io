@@ -166,6 +166,8 @@ button.addEventListener("click", () => {
   theme_light.classList.toggle("change-theme-light");
   head_color.classList.toggle("head-color-change");
   head_brain.classList.toggle("head-brain-change");
+  light_a11y_handle.classList.toggle("light-a11y");
+  light_a11y_title.classList.toggle("light-a11y");
   // text_accent.classList.toggle("dark-accent");
   // brain_linije.classList.toggle("brain-linije-change");
   brain_linije.forEach((el) => {
@@ -212,6 +214,8 @@ let rect_darker = document.querySelectorAll(".rect-darker");
 let head_accent = document.querySelectorAll(".head-accent");
 let text_accent = document.querySelectorAll(".light-accent");
 let footer_accent = document.querySelectorAll(".footer-accent");
+let light_a11y_handle = document.querySelector(".a11y-handle");
+let light_a11y_title = document.querySelector(".a11y-title");
 
 // novo navigacija
 
@@ -281,7 +285,7 @@ let data = [
 
   {
     name: "contrast",
-    max: 3,
+    max: 2,
     selected: 0,
   },
 ];

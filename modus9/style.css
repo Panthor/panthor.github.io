@@ -1430,14 +1430,7 @@ Accessibility - tezi dio
 }
 
 .typography1 {
-  font-family: Georgia, Arial, serif !important;
   font-family: "opendyslexic" !important;
-}
-
-.links1 a {
-  text-decoration: underline !important;
-  background-color: #fdff32;
-  color: #000;
 }
 
 .contrast1 {
@@ -1446,24 +1439,8 @@ Accessibility - tezi dio
 }
 
 .contrast2 {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-}
-
-.contrast3 {
   -webkit-filter: contrast(200%);
   filter: contrast(200%);
-}
-
-.contrast4 {
-  -webkit-filter: contrast(75%);
-  filter: contrast(75%);
-}
-
-.cursor1,
-.cursor1 a,
-.cursor1 button {
-  cursor: url("/images/a11y/a11y-cursor.png"), auto !important;
 }
 
 .a11y-panel {
@@ -1483,8 +1460,7 @@ Accessibility - tezi dio
   width: 360px;
   border: 1px solid #ccc;
   padding: 20px;
-  -webkit-box-shadow: 0 0 10px #ccc;
-  box-shadow: 0 0 10px #ccc;
+
   background-color: #fff;
   transition: transform 0.8s ease;
   font-family: "Josefin Sans", sans-serif;
@@ -1517,6 +1493,7 @@ Accessibility - tezi dio
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
   padding: 5px;
+  transition: background-color 2s ease;
 }
 
 @media (max-width: 767px) {
@@ -1542,6 +1519,7 @@ Accessibility - tezi dio
   font-size: 14px;
   letter-spacing: 0;
   margin: -20px -20px 20px;
+  transition: background-color 2s ease;
 }
 
 @media (max-width: 767px) {
@@ -1638,43 +1616,47 @@ Accessibility - tezi dio
 }
 
 [data-selected="1"] .steps li:nth-child(1) {
-  background-color: #564b68;
+  background-color: #7d7e75;
 }
 
 [data-selected="2"] .steps li:nth-child(1) {
-  background-color: #564b68;
+  background-color: #7d7e75;
 }
 
 [data-selected="2"] .steps li:nth-child(2) {
-  background-color: #564b68;
+  background-color: #7d7e75;
 }
 
 [data-selected="3"] .steps li:nth-child(1) {
-  background-color: #564b68;
+  background-color: #7d7e75;
 }
 
 [data-selected="3"] .steps li:nth-child(2) {
-  background-color: #564b68;
+  background-color: #7d7e75;
 }
 
 [data-selected="3"] .steps li:nth-child(3) {
-  background-color: #564b68;
+  background-color: #7d7e75;
 }
 
 [data-selected="4"] .steps li:nth-child(1) {
-  background-color: #564b68;
+  background-color: #7d7e75;
 }
 
 [data-selected="4"] .steps li:nth-child(2) {
-  background-color: #564b68;
+  background-color: #7d7e75;
 }
 
 [data-selected="4"] .steps li:nth-child(3) {
-  background-color: #564b68;
+  background-color: #7d7e75;
 }
 
 [data-selected="4"] .steps li:nth-child(4) {
-  background-color: #564b68;
+  background-color: #7d7e75;
+}
+
+.full-width {
+  width: 100%;
 }
 
 #accessibility_contrast .a11y-name {
@@ -1715,4 +1697,13 @@ Accessibility - tezi dio
 
 #accessibility_contrast[data-selected="4"] .a11y-name:nth-child(5) {
   display: block !important;
+}
+
+/******************************************************************
+light tema za accessibility 
+ ******************************************************************/
+
+.light-a11y {
+  background-color: #7b8377;
+  transition: 2s ease;
 }

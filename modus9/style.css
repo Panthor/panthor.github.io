@@ -1277,7 +1277,7 @@ footer accent
 
 @media screen and (max-width: 573px) {
   .contact {
-    transform: translateY(10rem);
+    transform: translateY(6rem);
   }
   /* .layer {
     margin-bottom: 1rem;

@@ -166,6 +166,8 @@ button.addEventListener("click", () => {
   theme_light.classList.toggle("change-theme-light");
   head_color.classList.toggle("head-color-change");
   head_brain.classList.toggle("head-brain-change");
+  light_a11y_handle.classList.toggle("light-a11y");
+  light_a11y_title.classList.toggle("light-a11y");
   // text_accent.classList.toggle("dark-accent");
   // brain_linije.classList.toggle("brain-linije-change");
   brain_linije.forEach((el) => {
@@ -212,6 +214,8 @@ let rect_darker = document.querySelectorAll(".rect-darker");
 let head_accent = document.querySelectorAll(".head-accent");
 let text_accent = document.querySelectorAll(".light-accent");
 let footer_accent = document.querySelectorAll(".footer-accent");
+let light_a11y_handle = document.querySelector(".a11y-handle");
+let light_a11y_title = document.querySelector(".a11y-title");
 
 // novo navigacija
 
@@ -254,3 +258,174 @@ let footer_accent = document.querySelectorAll(".footer-accent");
 //     navbar.classList.remove("sticky");
 //   }
 // }
+
+//a11y
+
+const html = document.documentElement;
+const button6 = document.querySelectorAll(".a11y-button");
+const reset = document.querySelector(".a11y-reset");
+const handle = document.querySelector(".a11y-handle");
+
+let data = [
+  {
+    name: "size",
+    max: 2,
+    selected: 0,
+  },
+  {
+    name: "spacing",
+    max: 4,
+    selected: 0,
+  },
+  {
+    name: "typography",
+    max: 1,
+    selected: 0,
+  },
+
+  {
+    name: "contrast",
+    max: 2,
+    selected: 0,
+  },
+];
+
+// testing
+data.forEach((iris) => console.log(iris));
+
+// testing
+console.log(data[0].name);
+
+// handle reveala pannel
+handle.addEventListener("click", function () {
+  document.querySelector(".a11y-panel").classList.toggle("selected");
+});
+
+// svaki klik na button6 (a11y-button) izvrsi 'handleclick'
+button6.forEach((item) => {
+  item.addEventListener("click", handleClick);
+});
+
+// ls stuff
+// window.addEventListener("DOMContentLoaded", init);
+
+// reset.addEventListener("click", resetAll);
+
+// function resetAll() {
+//   // reset all html classes
+
+//   html.className = "";
+
+//   // reset all button data-selected attributes
+
+//   // button.forEach((item) => {
+//   //   item.dataset.selected = 0;
+//   // });
+
+//   // reset data object to default
+//   for (let i = 0; i < data.length; i++) {
+//     data[i].selected = 0;
+//   }
+
+//   // reset localStorage
+//   localStorage.removeItem("a11yOptions");
+
+//   // run init again
+//   init();
+// }
+
+function handleClick(e) {
+  const action = e.currentTarget.dataset.action;
+  const max = e.currentTarget.dataset.max;
+  let selected = e.currentTarget.dataset.selected;
+
+  // pobrini se za selected 0-max
+  if (selected < max) {
+    selected++;
+  } else {
+    selected = 0;
+  }
+
+  // apply to DOM data-selected value
+  e.currentTarget.dataset.selected = selected;
+
+  // update data object
+  let indexData = data.findIndex((item) => item.name === action);
+  data[indexData].selected = selected;
+
+  // split all html classes into array
+  htmlClasses = html.className.split(" ");
+
+  // iterate through array and find class that matches clicked and remove it
+  for (var i = 0; i < htmlClasses.length; i++) {
+    if (htmlClasses[i].indexOf(action) >= 0) {
+      html.classList.remove(htmlClasses[i]);
+    }
+  }
+
+  // add new class with new number
+  html.classList.add(`${action}${selected}`);
+}
+
+//
+//
+//
+//
+//
+//
+// media prefers thing
+
+const minjajBotun = document.querySelector(".nav-button");
+
+const useDark = window.matchMedia("(prefers-color-scheme: light)");
+
+function toggleDarkMode(state) {
+  changeThemeToLight(state);
+}
+
+function changeThemeToLight(state) {
+  document.body.classList.toggle("body-light-theme", state);
+  document.body.classList.toggle("font-color-dark", state);
+  brdo12.classList.toggle("brdo-fill", state);
+  zadnjebrdo.classList.toggle("brdo-fill", state);
+  svg_header.classList.toggle("go-blue", state);
+  footer.classList.toggle("go-blue", state);
+  layer.classList.toggle("go-blue", state);
+  line1.classList.toggle("line1-dark", state);
+  line2.classList.toggle("line2-dark", state);
+  brdo2.classList.toggle("brdo2-fill", state);
+  brdo3.classList.toggle("brdo3-fill", state);
+  brdo4.classList.toggle("brdo4-fill", state);
+  brdo5.classList.toggle("brdo5-fill", state);
+  brdo6.classList.toggle("brdo6-fill", state);
+  landscape.classList.toggle("landscape-light", state);
+  glavni_naslov.classList.toggle("glavni-naslov-light", state);
+  theme_button.classList.toggle("ri-sun-line", state);
+  theme_light.classList.toggle("change-theme-light", state);
+  head_color.classList.toggle("head-color-change", state);
+  head_brain.classList.toggle("head-brain-change", state);
+
+  brain_linije.forEach((el) => {
+    el.classList.toggle("brain-linije-change", state);
+  });
+  rect_lighter.forEach((el) => {
+    el.classList.toggle("rect-lighter-change", state);
+  });
+  rect_darker.forEach((el) => {
+    el.classList.toggle("rect-darker-change", state);
+  });
+  head_accent.forEach((el) => {
+    el.classList.toggle("head-accent-change", state);
+  });
+  text_accent.forEach((el) => {
+    el.classList.toggle("dark-accent", state);
+  });
+  footer_accent.forEach((el) => {
+    el.classList.toggle("footer-light-accent", state);
+  });
+}
+
+toggleDarkMode(useDark.matches);
+
+// kao da ne treba, sada treba refreshati ali radi
+// useDark.addEventListener((evt) => toggleDarkMode(evt.matches));

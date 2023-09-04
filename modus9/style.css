@@ -529,13 +529,16 @@ h3 {
 }
 
 @media (max-width: 700px) {
-  .svg-icona {
+  /* .svg-icona {
     margin: 0 6rem;
-  }
-  .anim {
+  } */
+  /* .anim {
     transform: scale(60, 1);
     transition: all 2s;
-  }
+  } */
+  /* .lines {
+    outline: 1px dashed plum;
+  } */
 }
 
 /* NOVI HEADER */
@@ -1175,7 +1178,9 @@ bez animacija
   .lijevopojma,
   .pojmalijeva,
   .desnopojma,
-  .pojmadesno {
+  .pojmadesno,
+  .anim1,
+  .anim2 {
     /*CSS transitions*/
     transition-property: none !important;
     /*CSS transforms*/
@@ -1296,6 +1301,18 @@ Rijesenje problema prikaza elemenata na mobu sa novim Int.obs.
   .desnopojma {
     opacity: 1;
     filter: blur(0);
+  }
+
+  .svg-icona {
+    margin: 0 1rem;
+  }
+  .prva-ikona {
+    opacity: 1;
+    transform: translateY(-100px);
+  }
+  .line1,
+  .line2 {
+    width: 200px;
   }
 }
 

@@ -68,7 +68,7 @@ body {
   background-image: url(slika.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateY(120vh);
+  transform: translateY(140vh);
   /* background-position: 1px; */
   /* background-origin: content-box */
 }
@@ -76,7 +76,7 @@ body {
 @media (max-width: 600px) {
   body {
     background-size: cover;
-    transform: translateY(30vh);
+    transform: translateY(40vh);
   }
 
   main {

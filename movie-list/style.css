@@ -75,7 +75,7 @@ body {
 
 @media (max-width: 600px) {
   body {
-    background-size: contain;
+    background-size: cover;
     transform: translateY(30vh);
   }
 

@@ -50,5 +50,45 @@
         </li>
       </ol>
     </main>
+    <script>
+const API_URL = "https://sheetdb.io/api/v1/YOUR_API_KEY"; // replace with your SheetDB API URL
+
+// Fetch movies from Google Sheet
+async function loadMovies() {
+  const res = await fetch(API_URL);
+  const movies = await res.json();
+  const list = document.getElementById("movie-list");
+  list.innerHTML = "";
+
+  movies.reverse().forEach(movie => {
+    let stars = "⭐".repeat(movie.stars);
+    let li = document.createElement("li");
+    li.innerHTML = `${movie.title} [${movie.year}] <span>${stars}</span>`;
+    list.appendChild(li);
+  });
+}
+
+// Add a new movie
+document.getElementById("movie-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const title = document.getElementById("title").value;
+  const year = document.getElementById("year").value;
+  const stars = document.getElementById("stars").value;
+
+  await fetch(API_URL, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ data: [{ title, year, stars }] })
+  });
+
+  e.target.reset();
+  loadMovies();
+});
+
+// Load on startup
+loadMovies();
+</script>
   </body>
 </html>
+

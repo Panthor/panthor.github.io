@@ -17,89 +17,77 @@
       <img src="slika.svg" alt="" />
     </header>
     <main>
-      <ol id="movie-list" class="orderedLista" reversed>
-        <li>
-          <div>City of the living dead [1980] <span>⭐⭐⭐⭐</span></div>
-        </li>
-        <li>
-          <div>Moonrise Kingdom [2012] <span>⭐⭐⭐⭐</span></div>
-        </li>
-        <li>
-          <div>Stingray Sam [2009] <span>⭐⭐⭐⭐</span></div>
-        </li>
-        <li>
-          <div>Anomalisa [2015] <span>⭐⭐⭐</span></div>
-        </li>
-        <li>
-          <div>Fire of Love [2022] <span>⭐⭐⭐</span></div>
-        </li>
-        <li>
-          <div>Krampus [2015] <span>⭐⭐</span></div>
-        </li>
-        <li>
-          <div>Triangle of Sadness [2022] <span>⭐⭐⭐⭐</span></div>
-        </li>
-        <li>
-          <div>Baby Reindeer [2024]<span>⭐⭐⭐⭐</span></div>
-        </li>
-        <li>
-          <div>A Man Escaped [1956]<span>⭐⭐⭐⭐</span></div>
-        </li>
-        <li>
-          <div>Crazy Love [2007]<span>⭐⭐⭐⭐</span></div>
-        </li>
-      </ol>
-     
+      <div class="input">
+        <form id="movie-form">
+          <input type="text" id="title" placeholder="Title" required />
+          <input type="number" id="year" placeholder="Year" required />
+          <input
+            type="number"
+            id="stars"
+            placeholder="Stars (1-5)"
+            min="1"
+            max="5"
+            required
+          />
+          <button type="submit">Add</button>
+        </form>
+      </div>
+      <div class="main">
+        <ol id="movie-list" class="orderedLista" reversed></ol>
+      </div>
     </main>
-     <h3>Add a new movie</h3>
-  <form id="movie-form">
-    <input type="text" id="title" placeholder="Movie title" required />
-    <input type="number" id="year" placeholder="Year" required />
-    <input type="number" id="stars" placeholder="Stars (1-5)" min="1" max="5" required />
-    <button type="submit">Add Movie</button>
-  </form>
+
     <script>
-const API_URL = "https://sheetdb.io/api/v1/td9trtqqxuuon"; // replace with your SheetDB API URL
+      const SHEET_ID = "1F1kRE6jFEJ1afNnVs_oQsPY4U10mYDqx8ZKsmBm9h-k"; // replace with your Google Sheet ID
+      const API_KEY = "AIzaSyAMCovOvuKON0pxJ-Os3zNaRqEw_s7v3Wo"; // replace with your API key
+      const RANGE = "Sheet1!A:C"; // adjust to your sheet range
+      const SHEETDB_URL = "https://sheetdb.io/api/v1/td9trtqqxuuon"; // for adding/editing
 
-// Fetch movies from Google Sheet
-async function loadMovies() {
-  const res = await fetch(API_URL);
-  const movies = await res.json();
-  const list = document.getElementById("movie-list");
-  list.innerHTML = "";
+      // Fetch movies from Google Sheets API
+      async function loadMovies() {
+        const res = await fetch(
+          `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`
+        );
+        const data = await res.json();
+        const rows = data.values || [];
+        const list = document.getElementById("movie-list");
+        list.innerHTML = "";
 
-  movies.reverse().forEach(movie => {
-    let stars = "⭐".repeat(movie.stars);
-    let li = document.createElement("li");
-    li.innerHTML = `${movie.title} [${movie.year}] <span>${stars}</span>`;
-    list.appendChild(li);
-  });
-}
+        // skip header row
+        rows
+          .slice(1)
+          .reverse()
+          .forEach((row) => {
+            const [title, year, stars] = row;
+            let starIcons = "⭐".repeat(parseInt(stars, 10));
+            let li = document.createElement("li");
+            li.innerHTML = `<div class=div-flex><div class="div-inline lijevi-div">${title} <span class="godina">[${year}]</span></div> <div class="div-inline stars"><span">${starIcons}</span></div><div>`;
+            list.appendChild(li);
+          });
+      }
 
-// Add a new movie
-document.getElementById("movie-form").addEventListener("submit", async (e) => {
-  e.preventDefault();
+      // Add a new movie via SheetDB
+      document
+        .getElementById("movie-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
 
-  const title = document.getElementById("title").value;
-  const year = document.getElementById("year").value;
-  const stars = document.getElementById("stars").value;
+          const title = document.getElementById("title").value;
+          const year = document.getElementById("year").value;
+          const stars = document.getElementById("stars").value;
 
-  await fetch(API_URL, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({ data: [{ title, year, stars }] })
-  });
+          await fetch(SHEETDB_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ data: [{ title, year, stars }] }),
+          });
 
-  e.target.reset();
-  loadMovies();
-});
+          e.target.reset();
+          loadMovies(); // reload from Google Sheets API
+        });
 
-// Load on startup
-loadMovies();
-</script>
+      // Initial load
+      loadMovies();
+    </script>
   </body>
 </html>
-
-
-
-

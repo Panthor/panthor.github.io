@@ -95,7 +95,9 @@ ol li::marker {
   padding: 2rem;
   font-size: 2rem;
   color: #d4eaec;
-  /* border-radius: 5px ; */
+  border-radius: 5px;
+  /* outline: none; */
+  border: 1px solid #8f9e9f;
 }
 
 #title {
@@ -107,16 +109,30 @@ ol li::marker {
 }
 
 button {
-  background-color: #d4eaec;
-  padding: 2rem 3rem;
-  border-radius: 5px;
-  color: #293756;
+  margin-left: 0.5rem;
+  /* background-color: #b98ea7; */
+  background-color: #00cc92;
+  padding: 3rem 4rem;
+  border-radius: 7px;
+  color: #1d2a42;
   font-weight: bold;
   font-size: 2rem;
+  box-shadow: 0 8px #4b5c82;
+  text-decoration: none;
+  border: none;
 }
 
 button:hover {
   cursor: pointer;
+  background-color: #00f5af;
+  /* background-color: #00e0a1; */
+  outline: none;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(8px);
+  /* transition: transform 0.005s ease-in; */
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -124,4 +140,34 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+::selection {
+  background: #ed445f;
+}
+
+input:focus {
+  outline: 1px solid #ffcc00;
+  box-shadow: 0 0 10px #ffcc00;
+  transition: outline 0.1s ease-in;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #293756;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00cc92;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00f5af;
 }
